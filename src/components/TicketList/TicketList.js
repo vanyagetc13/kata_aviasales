@@ -38,9 +38,11 @@ const TicketList = React.memo(function TicketListNotMemed() {
 					<TicketCard key={idx} ticket={ticket} />
 				))}
 			</div>
-			<button className={styles.btn} onClick={() => setCurrentLength((prev) => prev + 5)}>
-				Показать еще 5 билетов!
-			</button>
+			{currentLength < list.length && (
+				<button className={styles.btn} onClick={() => setCurrentLength((prev) => prev + 5)}>
+					Показать еще 5 билетов!
+				</button>
+			)}
 		</>
 	)
 })
