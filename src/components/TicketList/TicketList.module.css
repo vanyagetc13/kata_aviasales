@@ -1,0 +1,18 @@
+.list {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.btn {
+	width: 100%;
+	padding: 15px 20px;
+	background-color: #2196f3;
+	color: #fff;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 0.857em;
+}

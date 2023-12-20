@@ -1,0 +1,51 @@
+.wrapper {
+	color: #4a4a4a;
+	font-size: 0.857em;
+	font-weight: 600;
+	line-height: 170%;
+	letter-spacing: 0.5px;
+}
+
+.input {
+	appearance: none;
+}
+
+.list {
+	list-style: none;
+	display: flex;
+	width: 500px;
+}
+
+.item {
+	background-color: #fff;
+	border: 1px solid #dfe5ec;
+	display: flex;
+	flex: 1 1 0px;
+	justify-content: center;
+	text-transform: uppercase;
+}
+
+.item + .item {
+	border-left: none;
+}
+
+.item:has(.input:checked) {
+	background-color: #2196f3;
+	color: #fff;
+	border: none;
+}
+
+.label {
+	padding: 15px;
+	cursor: pointer;
+}
+
+.item:first-child {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.item:last-child {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}

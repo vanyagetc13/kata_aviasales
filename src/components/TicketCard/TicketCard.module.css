@@ -1,0 +1,47 @@
+.card {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	font-size: 1.7em;
+	color: #2196f3;
+}
+
+.cardHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.routes {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 100%;
+}
+
+.route {
+	width: 100%;
+	display: flex;
+	gap: 20px;
+}
+
+.routeBlock {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 0;
+	font-size: 1rem;
+	color: #a0b0b9;
+}
+
+.routeBlockName {
+	line-height: 150%;
+	text-transform: uppercase;
+}
+
+.routeBlockDescription {
+	color: #4a4a4a;
+	font-weight: 600;
+	font-size: 1rem;
+}

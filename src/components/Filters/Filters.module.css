@@ -1,0 +1,20 @@
+.wrapper {
+	padding: 10px 0;
+	height: fit-content;
+}
+
+.title {
+	font-family: Open Sans;
+	font-size: 0.857em;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 100%;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	padding: 10px 20px;
+}
+
+.filterList {
+	font-size: 0.93em;
+	list-style: none;
+}
