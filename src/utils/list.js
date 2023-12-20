@@ -14,7 +14,7 @@ const getFilteredAndSortedList = (list, appliedFilters, sort) => {
 				a.segments.reduce((acc, curr) => acc + curr.duration, 0) -
 				b.segments.reduce((acc, curr) => acc + curr.duration, 0)
 		) // Сортировка: быстрее
-	if (sort === 'optimal') return [...filtered].sort((a, b) => a.price - b.price) // Optimal ?! Дописать (сейчас сортировка: дешевле)
+	if (sort === 'optimal') return filtered
 	return filtered
 }
 const getLenghtedList = (list, length) => {
