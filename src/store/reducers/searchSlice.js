@@ -21,7 +21,7 @@ const getTickets = createAsyncThunk('search/getTickets', async function tickets(
 		const { stop, tickets } = json
 		return { stop, tickets }
 	} catch (err) {
-		return tickets(searchID)
+		return await tickets(searchID)
 	}
 })
 
