@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import useList from '../../hooks/useList'
 import { getTickets } from '../../store/reducers/searchSlice'
@@ -13,7 +13,16 @@ const TicketList = () => {
 	const filters = useSelector((state) => state.filter.transfers)
 	const loading = useSelector((state) => state.search.loadingTickets)
 	const searchID = useSelector((state) => state.search.searchID)
-	const ourList = useList(list, filters, sort, currentLength)
+	const appliedFilters = useMemo(() => {
+		return filters.reduce(
+			(acc, curr) => {
+				if (curr.checked) return [...acc, curr]
+				else return acc
+			},
+			[filters]
+		)
+	})
+	const ourList = useList(list, appliedFilters, sort, currentLength)
 	useEffect(() => {
 		if (searchID) dispatch(getTickets(searchID))
 	}, [searchID, list])
